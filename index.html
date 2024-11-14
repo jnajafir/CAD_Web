@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Prediction</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coronary Artery Disease Prediction</h1>
+        
+        <div class="upload-section">
+            <h2>Upload Medical Image</h2>
+            <p>Please upload a medical image for CAD prediction</p>
+            <input type="file" id="imageUpload" accept=".png,.jpg,.jpeg" style="display: none;">
+            <button class="button" onclick="document.getElementById('imageUpload').click()">
+                Choose File
+            </button>
+            <p id="selected-file">No file selected</p>
+        </div>
+
+        <div class="preview-section">
+            <canvas id="imagePreview" style="display: none;"></canvas>
+        </div>
+
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Processing image...</p>
+        </div>
+
+        <div id="result-section">
+            <h2>Prediction Result</h2>
+            <p id="prediction-text"></p>
+            <p id="confidence-text"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
